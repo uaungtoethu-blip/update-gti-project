@@ -1,0 +1,115 @@
+/*
+Admission page CSS (admission.css)
+- Admission hero + content
+- Overrides to keep cream section readable even with global dark theme
+*/
+
+
+.admission-hero{
+  position: relative;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  background-color: transparent !important;
+  background-image: url("/gti/assets/images/admission.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.admission-hero__overlay{
+  background: linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.35)
+  );
+}
+
+.admission-hero__content{
+  position: relative;
+  z-index: 2;
+  padding: 80px 15px;
+}
+.admission-hero__title{
+  margin: 0 0 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: clamp(24px, 3vw, 44px);
+}
+.admission-hero__subtitle{
+  margin: 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.admission-content{
+  background: #395368;
+  padding: 48px 0 60px;
+}
+.admission-content__mm-title{
+  text-align: center;
+  margin: 0;
+  font-weight: 800;
+  color: #7b2cff;
+  font-size: clamp(20px, 2.2vw, 34px);
+  line-height: 1.35;
+}
+.admission-content__divider{
+  width: 120px;
+  height: 4px;
+  background: #e7c64a;
+  margin: 22px auto 26px;
+  border-radius: 999px;
+}
+.admission-content__body{
+  max-width: 980px;
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 1.9;
+}
+.admission-content__body p{ margin: 0 0 16px; }
+.admission-content__note{ margin-top: 18px; font-weight: 600; }
+
+/* admission overrides (undo global dark) */
+.admission-content{
+  background: #395368;
+  padding: 48px 0 60px;
+}
+
+.admission-content__body,
+.admission-content__body p{
+  color: #ffffff;
+}
+.admission-content__mm-title{ color: #d4dae1 !important; }
+
+
+/* lists helpers from your snippet */
+.section-title{ margin-top: 20px; font-weight: 700; }
+.mm-list{ list-style: none; padding-left: 0; margin-bottom: 15px; }
+.mm-list li{ display: flex; gap: 10px; margin-bottom: 8px; line-height: 1.9; }
+.mm-mark{ font-weight: 700; min-width: 30px; }
+/* Myanmar text readability boost */
+.admission-content__body{
+  font-size: 18px !important;     /* before 16px */
+  line-height: 2.0 !important;    /* spacing bigger */
+}
+
+.admission-content__body p,
+.admission-content__body li{
+  font-size: 18px !important;
+  line-height: 2.0 !important;
+}
+.admission-content__body{
+  font-family: "Noto Sans Myanmar", "Pyidaungsu", sans-serif;
+}
+
+@media (max-width: 576px){
+  .admission-content__body,
+  .admission-content__body p,
+  .admission-content__body li{
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+  }
+}

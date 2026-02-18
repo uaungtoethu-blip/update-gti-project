@@ -1,0 +1,25 @@
+<?php
+
+namespace Database\Factories;
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Heading>
+ */
+class HeadingFactory extends Factory
+{
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
+    public function definition(): array
+    {
+        return [
+            'logoImage'=>'image/logo.jpg',
+            'headingImageOrVideo'=>'image/logo.jpg',
+            'headingParagraph'=>$this->faker->paragraph(),
+        ];
+    }
+}

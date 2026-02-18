@@ -1,0 +1,135 @@
+/*
+About page CSS (about.css)
+- About hero overlay
+- Tabs pills
+- Cards
+- Principal factbook split section
+*/
+
+.about-hero{
+  position: relative;
+  padding: 140px 0 80px;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.about-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.35);
+}
+
+/* Pills Tabs */
+.about-tabs-wrap{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.about-tabs{
+  background: rgba(255,255,255,0.8);
+  border-radius: 999px;
+  padding: 8px;
+  box-shadow: 0 12px 30px rgb(16, 39, 65);
+}
+.about-tabs .nav-link{
+  border-radius: 999px;
+  padding: 10px 22px;
+  font-weight: 700;
+  color: #060606;
+}
+.about-tabs .nav-link.active{
+  background: #a12c2f;
+  color: #fff;
+}
+
+/* Card */
+.about-card{
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 40px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.15);
+}
+
+.about-card h2{
+  color: #000000;
+  font-weight: 700;
+}
+
+.about-card p{
+  color: #000000;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+
+/* Principal Factbook Style */
+.principal-section.split{ padding:60px 0; }
+.p-side,.p-main{
+  background:#e0d9d6; border-radius:18px; padding:22px;
+  box-shadow:0 12px 30px rgba(238, 233, 233, 0.258);
+}
+.p-side img{
+  width:100%; border-radius:14px; object-fit:cover; max-height:220px;
+}
+.p-side h4{ margin:14px 0 4px; font-weight:800; }
+.p-side p{ margin:0; color:#6b7280; }
+.p-main h3{ font-weight:900; margin:6px 0 10px; }
+.p-main p{ color:#374151; line-height:1.8; }
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.gti-contact-compact{
+  background:#395368;
+  padding:40px 0; 
+}
+
+.contact-mini{
+  padding:15px;
+}
+
+.contact-mini i{
+  font-size:18px;
+  color:#ff6600;
+  margin-bottom:8px;
+}
+
+.contact-mini h6{
+  font-size:15px;
+  margin-bottom:6px;
+  font-weight:600;
+}
+
+.contact-mini p{
+  font-size:14px;
+  margin:0;
+  color:#555;
+}
+
+.contact-mini a{
+  text-decoration:none;
+  color:#0d6efd;
+}
+
+/* =========================
+   GTI Footer Style
+   */
+
+.gti-footer-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}

@@ -1,0 +1,137 @@
+/*
+Theme CSS (global look & feel)
+- Colors
+- Dark theme defaults (#395368)
+- Global overrides for sections/cards
+- Footer + compact contact
+- Header spacing fix
+*/
+
+:root{
+  --gti-bg: #395368;
+  --gti-text: #ffffff;
+  --gti-muted: rgba(255,255,255,.75);
+  --gti-link: #9fd0ff;
+  --gti-link-hover: #ffd27a;
+  --headerH: 110px;
+}
+
+/* Whole page background */
+html, body{
+  background: var(--gti-bg) !important;
+  color: var(--gti-text);
+}
+
+/* Header overlaps first section fix */
+body{
+  padding-top: var(--headerH);
+}
+@media (max-width: 991px){
+  :root{ --headerH: 95px; }
+}
+
+/* Links */
+a{ text-decoration: none !important; color: var(--gti-link) !important; }
+a:hover{ color: var(--gti-link-hover) !important; }
+
+/* Default text on dark */
+body, p, span, li{
+  color: var(--gti-text);
+}
+p{ color: var(--gti-text); }
+
+/* Muted text */
+.text-muted{ color: var(--gti-muted) !important; }
+
+/* Sub-header */
+.sub-header{ background-color: var(--gti-bg); }
+.sub-header .left-content p{ color: var(--gti-bg); }
+.sub-header .right-icons ul li a{ color: #fff; }
+.sub-header .right-icons ul li a:hover{ color: #2567f5; }
+.sub-header .left-content p em{ color: #2567f5; }
+
+/* Background header (sticky) */
+.background-header{ background-color:#fff!important; }
+.background-header .main-nav .nav li a,
+.background-header .logo{ color:#1e1e1e!important; }
+.background-header .main-nav .nav li:hover a{ color: var(--gti-bg)!important; }
+.background-header .nav li a.active{ color: var(--gti-bg)!important; }
+
+/* Default nav colors */
+.header-area .main-nav .logo{ color: #fff; }
+.header-area .main-nav .nav li a{ color: #010000e6; }
+.header-area .main-nav .nav li:hover a,
+.header-area .main-nav .nav li a.active{ color: #fff!important; }
+.background-header .main-nav .nav li:hover a,
+.background-header .main-nav .nav li a.active{ color: #fff!important; opacity: 1; }
+.header-area .main-nav .nav li.has-sub:after{ color:#ffffff; }
+.background-header .main-nav .nav li.has-sub:after{ color:#1e1e1e; }
+
+/* Dropdown */
+.header-area .main-nav .nav li.has-sub ul.sub-menu li a{ color:#2a2a2a!important; }
+.header-area .main-nav .nav li.has-sub ul li a:hover{
+  background: var(--gti-bg);
+  color: #ffffff!important;
+}
+
+/* Mobile header base */
+@media (max-width: 767px){
+  .header-area .main-nav .logo{ color:#1e1e1e; }
+  .header-area .main-nav .nav li a{ color:#191a20 !important; }
+  .header-area .main-nav .nav li a:hover{ color:#2567f5!important; }
+}
+
+/* Logo image width fix (prevent huge logo) */
+.header-area .logo img{
+  width: 80px !important;
+  height: 80px !important;
+  max-width: none !important;
+  object-fit: contain;
+}
+
+/* Map responsive helper */
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+/* Compact contact (global) */
+.gti-contact-compact{
+  background:#f8f9fa;
+  padding:35px 0;
+}
+.contact-mini{ padding:15px; }
+.contact-mini i{ font-size:18px; color:#ffcc66; margin-bottom:8px; }
+.contact-mini h6{ font-size:15px; margin-bottom:6px; font-weight:600; color:#ffffff; }
+.contact-mini p{ font-size:14px; margin:0; color: rgba(255,255,255,.85); }
+.contact-mini a{ color:#ffffff; text-decoration: underline !important; }
+
+/* Footer center */
+.gti-footer-center{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background: var(--gti-bg);
+  color: rgba(255,255,255,.85);
+  border-top:1px solid rgba(255,255,255,.15);
+  padding:14px 10px;
+  font-size:14px;
+}
+
+/* Generic dark cards (optional utility) */
+.gti-glass{
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+}
