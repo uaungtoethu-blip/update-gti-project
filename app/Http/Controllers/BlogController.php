@@ -8,6 +8,17 @@ use Illuminate\Http\Request;
 
 class BlogController extends Controller
 {
+    public function new(){
+        return view('news');
+    }
+    public function admission(){
+        return view('admission');
+    }
+    public function about(){
+        return view('about',[
+            'about'=>Heading::latest()->first()
+        ]);
+    }
     public function index(){
     return view('index',[
         'blogs'=>Blog::with('author')->latest()->filter(request(['searchValue','author']))->paginate(9)->withQueryString()

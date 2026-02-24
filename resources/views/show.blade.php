@@ -1,6 +1,6 @@
 @props(['blog','randomBlogs'])
 <div class="bg-dark">
-<x-layout>
+<x-mylayout>
     <div class="container-fluid">
         <x-blog-card> 
             <div class="container">
@@ -9,6 +9,6 @@
              <x-randomBlog :randomBlogs="$randomBlogs"></x-randomBlog>
             </x-blog-card>            
         </div>
-        </x-layout>
+        </x-mylayout>
 </div>
     

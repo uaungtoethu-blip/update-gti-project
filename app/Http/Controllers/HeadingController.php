@@ -49,14 +49,22 @@ class HeadingController extends Controller
             'blog'=>$blog
         ]);
     }
-    public function headingStore(){
-        $data = request()->validate([
-         'heading'=>['required','max:200'],
-         'headingParagraph'=>['required']
-        ]);
-        Heading::create($data);
-        return redirect('/');
+    public function headingStore()
+{
+    $data = request()->validate([
+        'heading' => ['required', 'max:200'],
+        'headingParagraph' => ['required'],
+        'image' => ['nullable', 'image']
+    ]);
+
+    if (request()->hasFile('image')) {
+        $data['image'] = request()->file('image')->store('images');
     }
+
+    Heading::create($data);
+
+    return redirect('/');
+}
     public function index(){
         return view('admin.heading');
     }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -9,6 +10,11 @@ use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
+    public function admIndex(){
+        return view('admin-index',[
+        'blogs'=>Blog::with('author')->latest()->filter(request(['searchValue','author']))->paginate(6)->withQueryString()
+        ]);
+    }
     public function update(User $user){
         $img = request()->file('profileImg');
         $userData = request()->validate([

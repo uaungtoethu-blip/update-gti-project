@@ -1,5 +1,4 @@
-
-  <nav class="navbar navbar-expand-sm navbar-light bg-secondary fixed-top bg-opacity-75 position-fixed py-0" style="top: 5px">
+<nav class="navbar navbar-expand-sm navbar-light bg-secondary fixed-top bg-opacity-75 position-fixed py-0" style="top: 5px">
 
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="/">
@@ -14,7 +13,7 @@
         <li class="nav-item mx-2">
           <a href="/" class="nav-link active text-info">Home</a>
         </li>
-        {{-- this is admin premission>>>>> --}} 
+        
 
         @canany(['admin','it_teacher','cv_teacher','ec_teacher','mp_teacher','fm_teacher','ep_teacher'])
 
@@ -81,18 +80,9 @@
       @guest
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a href="/auth/register" class="btn btn-info btn-sm text-light">register</a>
-        </li>
-        <li class="nav-item">
-          <a href="/auth/login" class="btn btn-primary btn-sm ms-3">Login</a>
+          <a href="/login" class="btn btn-primary btn-sm ms-3">Login</a>
         </li>
       </ul>
       @endguest
     </div>
   </nav>
-
-  {{$slot}} 
-
-
-
-

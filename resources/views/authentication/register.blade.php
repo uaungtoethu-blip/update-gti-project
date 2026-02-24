@@ -1,4 +1,3 @@
-<x-layout>
-
+<x-mylayout>
     <x-auth.registerForm />
-</x-layout>
+</x-mylayout>

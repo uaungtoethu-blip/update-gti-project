@@ -16,12 +16,15 @@ use App\Http\Controllers\TeacherController;
 
 Route::get('/',[BlogController::class,'index']);
 Route::get('/blog/{slug:slug}',[BlogController::class,'show']); 
+Route::get('/about',[BlogController::class,'about']);
+Route::get('/admission',[BlogController::class,'admission']);
+Route::get('/news',[BlogController::class,'new']);
 
 Route::middleware('guest')->group(function(){
 
 Route::get('/auth/register',[UserController::class,'register']);
 Route::post('/auth/register',[UserController::class,'store']);
-Route::get('/auth/login',[UserController::class,'loginForm']);
+Route::get('/login',[UserController::class,'loginForm']);
 Route::post('/auth/login',[UserController::class,'login']);
 
 });
@@ -40,7 +43,7 @@ Route::middleware('auth')->group(function(){
 Route::patch('/user/{user:username}/edit',[UserController::class,'update']);
 Route::post('/blog/{blog:slug}/comment',[CommentController::class,'store']);
 Route::post('/auth/logout',[UserController::class,'logout']);
-
+Route::get('/admin/admin-index',[UserController::class,'admIndex']);
 });
 
 // adminroute >>>>

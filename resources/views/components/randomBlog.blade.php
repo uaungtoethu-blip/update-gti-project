@@ -84,7 +84,7 @@ function playVideo(button) {
                             </div>
                             </div>
                                 <a class="w-100 btn btn-secondary text-info" href="/blog/{{$randomBlog->slug}}">ReadMore....</a>
-                                <div class="mt-2 justify-content-between d-flex">
+                                <div class="mt-2 justify-content-between d-flex"> 
 </div>
             </x-blog-card>
         </div>

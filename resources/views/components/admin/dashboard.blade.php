@@ -1,4 +1,4 @@
-<x-layout>
+<x-mylayout>
     <div class="container-fluid pt-5 pb-2">
       <div class="row">
         {{-- admin can --}}
@@ -19,4 +19,4 @@
         </div>
       </div>
     </div>
-</x-layout>
+</x-mylayout>

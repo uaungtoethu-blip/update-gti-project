@@ -1,5 +1,5 @@
 @props(['blog'])
-<x-layout>
+<x-mylayout>
     <div class="container my-4 mt-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -47,4 +47,4 @@
     </div>
 </div>
 
-</x-layout>
+</x-mylayout>

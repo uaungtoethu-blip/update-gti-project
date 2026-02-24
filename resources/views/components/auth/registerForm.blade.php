@@ -1,4 +1,4 @@
-<x-layout>
+
 
     <x-form-frame action="/auth/register" method="POST">
         @csrf
@@ -15,4 +15,4 @@
             <x-submitButton name="Register" />
         </x-card>
     </x-form-frame>
-</x-layout>
+
